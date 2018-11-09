@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "type": "shell",
+    // "echoCommand": true,
+    "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": false
+    },
+    "tasks": [{
+        "isBackground": true,
+        "label": "Run go build",
+        "command": "go build -o usr/local/sbin/release-manager && ./usr/local/sbin/release-manager",
+        // "problemMatcher": "$go",
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    }]
+}

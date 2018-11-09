@@ -1,0 +1,7 @@
+.d { background: #3AA3E3; }
+.d { background: #4fb1e2; }
+.d { background: #bff442; }
+/* attachments */
+.d { background: #2eb886; /* good */ }
+.d { background: #daa038; /* warning */ }
+.d { background: #a30200; /* danger */ }

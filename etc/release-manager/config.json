@@ -1,0 +1,9 @@
+{
+    "listen": "0.0.0.0",
+    "port": 7500,
+    "db_host": "pgsql01.prod.web.wz-ams.lo.mobbtech.com",
+    "db_port": 6432,
+    "db_name": "release-manager",
+    "db_user": "release-manager",
+    "db_pass": "NolyophNak8"
+}
