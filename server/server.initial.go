@@ -73,6 +73,10 @@ func handleFunc(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if len(post) == 0 {
+		return
+	}
+
 	Payload = PayloadStruct{}
 	if post.Get("payload") != "" {
 		if err := json.Unmarshal([]byte(post.Get("payload")), &Payload); err != nil {
@@ -96,10 +100,6 @@ func handleFunc(w http.ResponseWriter, r *http.Request) {
 	} else {
 		Payload.Command = data.Command
 	}
-
-	fmt.Printf("Body length: %d", len(post))
-	fmt.Printf("\n-----------\nBody:\n%+v\n-----------\n", post)
-	fmt.Printf("\n-----------\nPayload:\n%+v\n-----------\n\n", Payload)
 
 	if Payload.Token != data.SlackVerification {
 		Error.get([]int{1003}).print(w)
