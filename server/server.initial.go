@@ -97,6 +97,7 @@ func handleFunc(w http.ResponseWriter, r *http.Request) {
 		Payload.Command = data.Command
 	}
 
+	fmt.Printf("Body length: %d", len(post))
 	fmt.Printf("\n-----------\nBody:\n%+v\n-----------\n", post)
 	fmt.Printf("\n-----------\nPayload:\n%+v\n-----------\n\n", Payload)
 
@@ -128,8 +129,8 @@ func handleFunc(w http.ResponseWriter, r *http.Request) {
 	if _, _, err := git.Version.GetVersion(); err == nil {
 		Payload.UserToken = user.Token
 	}
-	
-	fmt.Println(len(post))
+
+	fmt.Printf("Body length: %d", len(post))
 	fmt.Printf("\n-----------\nBody:\n%+v\n-----------\n", post)
 	fmt.Printf("\n-----------\nPayload:\n%+v\n-----------\n\n", Payload)
 
