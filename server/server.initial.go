@@ -128,6 +128,8 @@ func handleFunc(w http.ResponseWriter, r *http.Request) {
 	if _, _, err := git.Version.GetVersion(); err == nil {
 		Payload.UserToken = user.Token
 	}
+	
+	fmt.Println(len(post))
 	fmt.Printf("\n-----------\nBody:\n%+v\n-----------\n", post)
 	fmt.Printf("\n-----------\nPayload:\n%+v\n-----------\n\n", Payload)
 
